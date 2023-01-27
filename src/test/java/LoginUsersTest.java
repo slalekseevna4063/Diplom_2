@@ -1,23 +1,23 @@
-import UsersPojos.*;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import userspojos.*;
 
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.apache.http.HttpStatus.SC_UNAUTHORIZED;
 import static org.junit.Assert.assertEquals;
 
 public class LoginUsersTest {
-    ExistingUserPojo oldUser;
-    ExistingUserPojo defectUser; // пользователь с невалидными данными
-    NewUserPojo newUser;
+    public ExistingUserPojo oldUser;
+    public ExistingUserPojo defectUser; // пользователь с невалидными данными
+    public NewUserPojo newUser;
 
-    String accessToken;
-    Response responseLogin;
-    String success;
-    Response responseCreate;
+    public String accessToken;
+    public Response responseLogin;
+    public String success;
+    public Response responseCreate;
 
     @Before
     public void Preconditions() {

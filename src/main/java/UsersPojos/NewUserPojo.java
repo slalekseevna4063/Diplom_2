@@ -1,4 +1,4 @@
-package UsersPojos;
+package userspojos;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
@@ -13,13 +13,14 @@ public class NewUserPojo {
         this.name = name;
     }
 
+    public NewUserPojo() {
+    }
+
     public static NewUserPojo getRandomUser() {
         String email = RandomStringUtils.randomAlphabetic(10) + "@yandex.ru";
         String password = RandomStringUtils.randomAlphabetic(10);
         String name = RandomStringUtils.randomAlphabetic(8);
         return new NewUserPojo(email, password, name);
-    }
-    public NewUserPojo(){
     }
 
     public String getEmail() {
@@ -47,12 +48,13 @@ public class NewUserPojo {
     }
 
     public void setRandomPassword() {
-        this.password =  RandomStringUtils.randomAlphabetic(10);
+        this.password = RandomStringUtils.randomAlphabetic(10);
     }
 
     public void setRandomEmail() {
         this.email = RandomStringUtils.randomAlphabetic(10) + "@yandex.ru";
     }
+
     public void setRandomName() {
         this.name = RandomStringUtils.randomAlphabetic(8);
     }

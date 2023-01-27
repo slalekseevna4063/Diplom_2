@@ -1,4 +1,4 @@
-package OrdersPojos;
+package orderspojos;
 
 import io.qameta.allure.Step;
 import io.restassured.http.ContentType;

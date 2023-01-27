@@ -1,11 +1,11 @@
-import OrdersPojos.OrderApiPojo;
-import OrdersPojos.OrderPojo;
-import UsersPojos.*;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
+import orderspojos.OrderApiPojo;
+import orderspojos.OrderPojo;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import userspojos.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,15 +14,15 @@ import static org.apache.http.HttpStatus.*;
 import static org.junit.Assert.assertEquals;
 
 public class CreateOrdersTest {
-    NewUserPojo newUser;
-    ExistingUserPojo oldUser;
-    String accessToken;
-    Response responseOrder;
-    Response responseCreate;
-    Response responseLogin;
-    String success;
-    OrderPojo order;
-    List<String> ingredients = Arrays.asList("61c0c5a71d1f82001bdaaa72", "61c0c5a71d1f82001bdaaa73", "61c0c5a71d1f82001bdaaa7a", "61c0c5a71d1f82001bdaaa6d");
+    public NewUserPojo newUser;
+    public ExistingUserPojo oldUser;
+    public String accessToken;
+    public Response responseOrder;
+    public Response responseCreate;
+    public Response responseLogin;
+    public String success;
+    public OrderPojo order;
+    public List<String> ingredients = Arrays.asList("61c0c5a71d1f82001bdaaa72", "61c0c5a71d1f82001bdaaa73", "61c0c5a71d1f82001bdaaa7a", "61c0c5a71d1f82001bdaaa6d");
 
     @Before
     public void Preconditions() {
@@ -70,6 +70,7 @@ public class CreateOrdersTest {
         responseOrder = OrderApiPojo.createOrder(order, accessToken);
         responseOrder.then().statusCode(SC_INTERNAL_SERVER_ERROR);
     }
+
     @After
     public void Postconditions() {
         if (accessToken != null) {

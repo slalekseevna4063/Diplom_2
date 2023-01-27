@@ -1,27 +1,27 @@
-import UsersPojos.*;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import userspojos.*;
 
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.apache.http.HttpStatus.SC_UNAUTHORIZED;
 import static org.junit.Assert.assertEquals;
 
 public class ChangeCredentialsTest {
-    ExistingUserPojo oldUser;
-    NewUserPojo newUser;
-    String accessToken;
-    Response responseCreate;
-    String message = "You should be authorised";
-    Response responseLogin;
-    Response responseInfo;
-    String success;
-    String messageError;
+    public ExistingUserPojo oldUser;
+    public NewUserPojo newUser;
+    public String accessToken;
+    public Response responseCreate;
+    public String message = "You should be authorised";
+    public Response responseLogin;
+    public Response responseInfo;
+    public String success;
+    public String messageError;
 
     @Before
-    public void Preconditions () {
+    public void Preconditions() {
         newUser = NewUserPojo.getRandomUser();
         responseCreate = UserApiPojo.createUser(newUser);
         oldUser = new ExistingUserPojo(newUser.getEmail(), newUser.getPassword());

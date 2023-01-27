@@ -1,22 +1,22 @@
-import UsersPojos.AuthPojo;
-import UsersPojos.ErrorsPojo;
-import UsersPojos.NewUserPojo;
-import UsersPojos.UserApiPojo;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import userspojos.AuthPojo;
+import userspojos.ErrorsPojo;
+import userspojos.NewUserPojo;
+import userspojos.UserApiPojo;
 
 import static org.apache.http.HttpStatus.SC_FORBIDDEN;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.junit.Assert.assertEquals;
 
 public class CreateUsersTest {
-    NewUserPojo user;
-    String accessToken;
-    String success;
-    Response responseCreate;
+    public NewUserPojo user;
+    public String accessToken;
+    public String success;
+    public Response responseCreate;
 
     @Before
     public void createNewUser() {
@@ -73,6 +73,7 @@ public class CreateUsersTest {
         success = responseCreate.then().statusCode(SC_FORBIDDEN).extract().body().as(ErrorsPojo.class).getSuccess();
         assertEquals("false", success);
     }
+
     @After
     public void Postconditions() {
         if (accessToken != null) {

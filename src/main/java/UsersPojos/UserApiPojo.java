@@ -1,4 +1,4 @@
-package UsersPojos;
+package userspojos;
 
 import io.qameta.allure.Step;
 import io.restassured.http.ContentType;

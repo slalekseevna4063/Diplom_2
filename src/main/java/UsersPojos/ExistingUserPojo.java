@@ -1,4 +1,4 @@
-package UsersPojos;
+package userspojos;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
@@ -11,7 +11,9 @@ public class ExistingUserPojo {
         this.email = email;
         this.password = password;
     }
-    public ExistingUserPojo(){}
+
+    public ExistingUserPojo() {
+    }
 
     public String getEmail() {
         return email;
