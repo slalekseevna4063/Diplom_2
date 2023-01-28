@@ -3,22 +3,22 @@ import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import userspojos.*;
+import userpojos.*;
 
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.apache.http.HttpStatus.SC_UNAUTHORIZED;
 import static org.junit.Assert.assertEquals;
 
 public class ChangeCredentialsTest {
-    public ExistingUserPojo oldUser;
-    public NewUserPojo newUser;
-    public String accessToken;
-    public Response responseCreate;
-    public String message = "You should be authorised";
-    public Response responseLogin;
-    public Response responseInfo;
-    public String success;
-    public String messageError;
+    private ExistingUserPojo oldUser;
+    private NewUserPojo newUser;
+    private String accessToken;
+    private Response responseCreate;
+    private String message = "You should be authorised";
+    private Response responseLogin;
+    private Response responseInfo;
+    private String success;
+    private String messageError;
 
     @Before
     public void Preconditions() {

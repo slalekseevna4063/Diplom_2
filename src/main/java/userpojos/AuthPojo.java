@@ -1,4 +1,4 @@
-package userspojos;
+package userpojos;
 
 public class AuthPojo {
     private String success;

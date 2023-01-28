@@ -1,4 +1,4 @@
-package userspojos;
+package userpojos;
 
 import org.apache.commons.lang3.RandomStringUtils;
 

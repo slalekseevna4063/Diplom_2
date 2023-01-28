@@ -1,12 +1,12 @@
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import orderspojos.OrderApiPojo;
-import orderspojos.OrderPojo;
+import orderpojos.OrderApiPojo;
+import orderpojos.OrderPojo;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import userspojos.*;
+import userpojos.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -16,13 +16,13 @@ import static org.apache.http.HttpStatus.SC_UNAUTHORIZED;
 import static org.junit.Assert.assertEquals;
 
 public class ReceiveUserOrdersTest {
-    public NewUserPojo newUser;
-    public ExistingUserPojo oldUser;
-    public String accessToken;
-    public Response responseInfo;
-    public String success;
-    public Response responseCreate;
-    public List<String> ingredients = Arrays.asList("61c0c5a71d1f82001bdaaa75", "61c0c5a71d1f82001bdaaa75", "61c0c5a71d1f82001bdaaa6e", "61c0c5a71d1f82001bdaaa6c"); // список ингредиентов
+    private NewUserPojo newUser;
+    private ExistingUserPojo oldUser;
+    private String accessToken;
+    private Response responseInfo;
+    private String success;
+    private Response responseCreate;
+    private List<String> ingredients = Arrays.asList("61c0c5a71d1f82001bdaaa75", "61c0c5a71d1f82001bdaaa75", "61c0c5a71d1f82001bdaaa6e", "61c0c5a71d1f82001bdaaa6c"); // список ингредиентов
 
     @Before
     public void Preconditions() {

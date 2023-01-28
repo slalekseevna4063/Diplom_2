@@ -3,20 +3,20 @@ import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import userspojos.AuthPojo;
-import userspojos.ErrorsPojo;
-import userspojos.NewUserPojo;
-import userspojos.UserApiPojo;
+import userpojos.AuthPojo;
+import userpojos.ErrorsPojo;
+import userpojos.NewUserPojo;
+import userpojos.UserApiPojo;
 
 import static org.apache.http.HttpStatus.SC_FORBIDDEN;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.junit.Assert.assertEquals;
 
 public class CreateUsersTest {
-    public NewUserPojo user;
-    public String accessToken;
-    public String success;
-    public Response responseCreate;
+    private NewUserPojo user;
+    private String accessToken;
+    private String success;
+    private Response responseCreate;
 
     @Before
     public void createNewUser() {

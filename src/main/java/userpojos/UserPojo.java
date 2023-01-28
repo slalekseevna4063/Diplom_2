@@ -1,4 +1,4 @@
-package userspojos;
+package userpojos;
 
 public class UserPojo {
     private String name;

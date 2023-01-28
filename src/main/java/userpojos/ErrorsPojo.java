@@ -1,4 +1,4 @@
-package userspojos;
+package userpojos;
 
 public class ErrorsPojo {
     private String message;

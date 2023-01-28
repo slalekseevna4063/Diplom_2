@@ -3,21 +3,21 @@ import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import userspojos.*;
+import userpojos.*;
 
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.apache.http.HttpStatus.SC_UNAUTHORIZED;
 import static org.junit.Assert.assertEquals;
 
 public class LoginUsersTest {
-    public ExistingUserPojo oldUser;
-    public ExistingUserPojo defectUser; // пользователь с невалидными данными
-    public NewUserPojo newUser;
+    private ExistingUserPojo oldUser;
+    private ExistingUserPojo defectUser; // пользователь с невалидными данными
+    private NewUserPojo newUser;
 
-    public String accessToken;
-    public Response responseLogin;
-    public String success;
-    public Response responseCreate;
+    private String accessToken;
+    private Response responseLogin;
+    private String success;
+    private Response responseCreate;
 
     @Before
     public void Preconditions() {

@@ -1,4 +1,4 @@
-package orderspojos;
+package orderpojos;
 
 import java.util.List;
 
